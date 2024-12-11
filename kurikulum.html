@@ -28,6 +28,65 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid black !important;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            .warna {
+                background-color: #2A3D66;
+            }
+            .konsentrasi {
+                background-color: #7ebaff;
+            }
+
+            .semester-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .semester-table th, .semester-table td {
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+            /* General Styling for the Semester Header */
+            .semester-header {
+                cursor: pointer;
+                background-color: #007BFF; /* Blue background */
+                color: white; /* White text */
+                font-size: 18px; /* Larger text for better readability */
+                text-align: left; /* Align text to the left */
+                padding: 12px 20px; /* Padding for spacing */
+                transition: background-color 0.3s; /* Smooth transition effect */
+            }
+
+            /* Hover Effect to highlight the semester header */
+            .semester-header:hover {
+                background-color: #0056b3; /* Darker blue when hovered */
+            }
+
+            /* Custom class for the title inside the header */
+            .semester-title {
+                font-weight: bold;
+                font-size: 20px; /* Slightly larger text for emphasis */
+                letter-spacing: 1px; /* Adds spacing between letters */
+            }
+
+            .semester-content {
+                display: none;
+            }
+            .semester-content.show {
+                display: table-row-group;
+            }
+        </style>
     </head>
 
     <body>
@@ -162,12 +221,985 @@
         <!-- Blog Start -->
         <div class="container-fluid blog py-5">
             <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 1000px;">
                     <h1 class="display-4 mb-4">KURIKULUM</h1>
                     <h4 class="text-primary">Hukum S1</h4>
-                       <p>
+                       
+                    
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester1')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 1</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester1" class="semester-content">
+
+                        <tr>
+                            <th>No</th>
+                            <th>Kode</th>
+                            <th>Nama Mata Kuliah</th>
+                            <th>Course Name</th>
+                            <th>Kuliah</th>
+                            <th>Praktikum</th>
+                            <th>Praktik</th>
+                            <th>Total SKS</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>MWU61101</td>
+                            <td>Bahasa Indonesia (teknik penulisan ilmiah)</td>
+                            <td>Indonesian Language</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MWU60102</td>
+                            <td>Pendidikan Agama I</td>
+                            <td>Religion 1</td>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>UTD60101</td>
+                            <td>Bahasa Inggris I</td>
+                            <td>General English 1</td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>UTD61102</td>
+                            <td>Komunikasi Digital</td>
+                            <td>Digital Communication</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>UTD61103</td>
+                            <td>Kecerdasan Emosional</td>
+                            <td>Emotional Intelligence</td>
+                            <td>1</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>HKM001</td>
+                            <td>Pengantar Ilmu Hukum</td>
+                            <td>Introduction to Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>HKM002</td>
+                            <td>Ilmu Negara</td>
+                            <td>State Science</td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>HKM003</td>
+                            <td>Hukum Adat</td>
+                            <td>Customary law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>HKM004</td>
+                            <td>Hukum Islam</td>
+                            <td>Islamic Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Total SKS Semester 1</strong></td>
+                            <td><strong>15</strong></td>
+                            <td><strong>1</strong></td>
+                            <td><strong>4</strong></td>
+                            <td><strong>20</strong></td>
+                        </tr>
+                        </tbody> 
+                    </table>
+
+
+
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester2')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 2</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester2" class="semester-content">
+
+                        <tr>
+                            <th>No</th>
+                            <th>Kode</th>
+                            <th>Nama Mata Kuliah</th>
+                            <th>Course Name</th>
+                            <th>Kuliah</th>
+                            <th>Praktikum</th>
+                            <th>Praktik</th>
+                            <th>Total SKS</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>MWU60104</td>
+                            <td>Pendidikan Agama II</td>
+                            <td>Religion 2</td>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>UTD60121</td>
+                            <td>Bahasa Inggris II</td>
+                            <td>General English 2</td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>HKM005</td>
+                            <td>Hukum Perdata</td>
+                            <td>Civil Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>HKM006</td>
+                            <td>Hukum Pidana</td>
+                            <td>Criminal Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>HKM007</td>
+                            <td>Hukum Tata Negara</td>
+                            <td>Constitutional Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>HKM008</td>
+                            <td>Hukum Administrasi Negara</td>
+                            <td>State Administrative Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>HKM009</td>
+                            <td>Hukum Agraria</td>
+                            <td>Agrarian Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>HKM010</td>
+                            <td>Hukum Internasional</td>
+                            <td>International Law</td>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Total SKS Semester 2</strong></td>
+                            <td><strong>15</strong></td>
+                            <td><strong>0</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>20</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester3')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 3</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester3" class="semester-content">
                         
-                       </p>
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MWU60106</td>
+                                <td>Pendidikan Agama III</td>
+                                <td>Religion 3</td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>HKM013</td>
+                                <td>Hukum Keluarga dan Waris</td>
+                                <td>Family and Inheritance Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>HKM018</td>
+                                <td>Kriminologi</td>
+                                <td>Criminology</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>HKM019</td>
+                                <td>Hukum Acara Perdata</td>
+                                <td>Civil Procedure Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HKM020</td>
+                                <td>Hukum Acara Pidana</td>
+                                <td>Criminal Procedure Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>HKM021</td>
+                                <td>Hukum Acara Tata Usaha Negara</td>
+                                <td>State Administrative Procedure Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>HKM026</td>
+                                <td>Hukum HAM</td>
+                                <td>Human Right Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>HKM017</td>
+                                <td>Ilmu Perundang-Undangan</td>
+                                <td>Law Science</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>HKM014</td>
+                                <td>Hukum Telekomunikasi</td>
+                                <td>Telecommunications Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 3</strong></td>
+                                <td><strong>17</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>3</strong></td>
+                                <td><strong>20</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester4')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 4</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester4" class="semester-content">
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MWU60107</td>
+                                <td>Pendidikan Agama IV</td>
+                                <td>Religion 4</td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>HKM023</td>
+                                <td>Hukum Dagang</td>
+                                <td>Banking Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>HKM027</td>
+                                <td>Hukum Konstitusi</td>
+                                <td>Banking Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>HKM024</td>
+                                <td>Hukum Lingkungan</td>
+                                <td>Environmental Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HKM034</td>
+                                <td>Pengantar Filsafat Hukum</td>
+                                <td>Introduction to Legal Philosophy</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>HKM012</td>
+                                <td>Hukum Ketenagakerjaan</td>
+                                <td>Labor Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>HKM011</td>
+                                <td>Hukum Perikatan</td>
+                                <td>Law Of Obligations</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>HKM015</td>
+                                <td>Hukum Pajak</td>
+                                <td>Tax Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>HKM016</td>
+                                <td>Hukum Penitensier</td>
+                                <td>Penitential Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 4</strong></td>
+                                <td><strong>17</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>5</strong></td>
+                                <td><strong>22</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester5')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 5</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester5" class="semester-content">
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MWU60108</td>
+                                <td>Pendidikan Agama IV</td>
+                                <td>Religion 5</td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>UTD61104</td>
+                                <td>Kewirausahaan Digital</td>
+                                <td>Digital Entrepreneurship</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>UTD61110</td>
+                                <td>Seminar Nasional</td>
+                                <td>National Seminar</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>MWU61103</td>
+                                <td>Pancasila</td>
+                                <td>Pancasila</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HKM029</td>
+                                <td>Hukum Kontrak</td>
+                                <td>Contract Design</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>HKM030</td>
+                                <td>Hukum Konstitusi dan Acara Mahkamah Konstitusi</td>
+                                <td>Constitutional Law and Procedures of the Constitutional Court</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>HKM028</td>
+                                <td>Hukum Perdagangan Internasional </td>
+                                <td>International Trade Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Pilihan Konsentrasi A</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK001</td>
+                                <td>Hukum Persaingan Usaha*</td>
+                                <td>Bussines Competition Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK002</td>
+                                <td>Hukum Investasi*</td>
+                                <td>Invesment Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK003</td>
+                                <td>Hukum Perlindungan Anak, Saksi, dan Korban**</td>
+                                <td>Child, Witness and Victim Protection Law</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK004</td>
+                                <td>Masalah Prosedural Hukum Elektronik**</td>
+                                <td>Electronic Law Procedural Issues</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK005</td>
+                                <td>Hukum Lembaga Negara***</td>
+                                <td>Law Of State Ionstitutions</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK006</td>
+                                <td>Hukum Partai Politik dan Pemilu***</td>
+                                <td>Law of Political Parties and Elections</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 5</strong></td>
+                                <td><strong>16</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>5</strong></td>
+                                <td><strong>21</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester6')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 6</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester6" class="semester-content">
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>MWU60109</td>
+                                <td>Pendidikan Agama VI</td>
+                                <td>Religion 6</td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>UTD62105</td>
+                                <td>Kreatifitas dan Inovasi Bisnis</td>
+                                <td>Creativity & Business Innovation</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>MWU62105</td>
+                                <td>Kewarganegaraan</td>
+                                <td>Civics</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>HKM031</td>
+                                <td>Etika Profesi Hukum</td>
+                                <td>Ethics of the Legal Profession</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HKM022</td>
+                                <td>Metode Penelitian Hukum</td>
+                                <td>Legal Research Methods </td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>HKM032</td>
+                                <td>Hukum Perseroan</td>
+                                <td>Company Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>HKM025</td>
+                                <td>Tindak Pidana Khusus</td>
+                                <td>Special Crimes</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Pilihan Konsentrasi B</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK007</td>
+                                <td>Hukum Perbankan*</td>
+                                <td>Banking Law</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK008</td>
+                                <td>Surat Berharga*</td>
+                                <td>Securities</td>
+                                <td>2</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK009</td>
+                                <td>Hukum Siber dan Pidana Internasional**</td>
+                                <td>International Cyber and Criminal Law</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK010</td>
+                                <td>Forensics Digital**</td>
+                                <td>Digital Forensics</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK011</td>
+                                <td>Hukum Pemerintahan Daerah***</td>
+                                <td>Local Goverment Law</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>HKMK012</td>
+                                <td>Hukum Sengketa Tata Usaha Negara***</td>
+                                <td>State Administrative Dispute Law</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 6</strong></td>
+                                <td><strong>16</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>4</strong></td>
+                                <td><strong>20</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester7')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 7</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester7" class="semester-content">
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>UTD61112</td>
+                                <td>Jaringan Bisnis</td>
+                                <td>Business Networking</td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>UTD61113</td>
+                                <td>Pelayanan Frima</td>
+                                <td>Service Excellence</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>UTD61114</td>
+                                <td>HAKI (Hak Cipta/Paten)</td>
+                                <td>Intellectual Property Rights/Patents</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>UTD61115</td>
+                                <td>Pengabdian Masyarakat</td>
+                                <td>Community Service</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>UTD61116</td>
+                                <td>Penelitian Ilmiah</td>
+                                <td>Scientific Research</td>
+                                <td></td>
+                                <td></td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>HKM033</td>
+                                <td>Praktek Peradilan</td>
+                                <td>Pradilan Practice</td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 7</strong></td>
+                                <td><strong>5</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>11</strong></td>
+                                <td><strong>16</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+                    <table class="semester-table">
+                        <thead>
+                            <tr class="semester-header" onclick="toggleSemester('semester8')">
+                                <th colspan="8" class="warna text-white" style="text-align: left;">Semester 8</th>
+                            </tr>
+                        </thead>
+                        <tbody id="semester8" class="semester-content">
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Nama Mata Kuliah</th>
+                                <th>Course Name</th>
+                                <th>Kuliah</th>
+                                <th>Praktikum</th>
+                                <th>Praktik</th>
+                                <th>Total SKS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>UTD62117</td>
+                                <td>Seminar Hasil Penelitian/Konferensi</td>
+                                <td>Research Conference</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>UTD62118</td>
+                                <td>Publikasi Artikel Penelitian Ilmiah (Scopus/Sinta)</td>
+                                <td>Research Publication</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>UTD62119</td>
+                                <td>Publikasi Artikel Pengmas (Jurnal Pengabdian) </td>
+                                <td>Public service publication</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>UTD62120</td>
+                                <td>Hak Kekayaan Intelektual/ Hak Cipta </td>
+                                <td>Intellectual Property Rights/ Copyrights</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><strong>Total SKS Semester 8</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>8</strong></td>
+                                <td><strong>8</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
                 </div>
             </div>
         </div>
@@ -230,6 +1262,15 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+
+
+        <script>
+            function toggleSemester(semesterId) {
+                var semesterContent = document.getElementById(semesterId);
+                semesterContent.classList.toggle('show');
+            }
+        </script>
     </body>
 
 </html>
